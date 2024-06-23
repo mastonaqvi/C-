@@ -1,0 +1,45 @@
+void saveHighScore(const string& playerName) {
+    string names[MAX_HIGH_SCORES + 1];
+    int scores[MAX_HIGH_SCORES + 1];
+    int count = 0;
+
+    ifstream file("highrecord.txt");
+    string name;
+    int score;
+    while (file >> name >> score) {
+        if (count < MAX_HIGH_SCORES) {
+            names[count] = name;
+            scores[count] = score;
+            count++;
+        }
+    }
+    file.close();
+
+    names[count] = playerName;
+    scores[count] = ::score;
+    count++;
+
+    // Simple bubble sort to sort high scores
+    for (int i = 0; i < count; ++i) {
+        for (int j = 0; j < count - 1; ++j) {
+            if (scores[j] < scores[j + 1]) {
+                swap(scores[j], scores[j + 1]);
+                swap(names[j], names[j + 1]);
+            }
+        }
+    }
+
+    ofstream outFile("highrecord.txt");
+    for (int i = 0; i < min(MAX_HIGH_SCORES, count); ++i) {
+        outFile << names[i] << ' ' << scores[i] << endl;
+    }
+}
+
+void displayHighScores() {
+    ifstream file("highrecord.txt");
+    string name;
+    int score;
+    while (file >> name >> score) {
+        cout << name << ": " << score << endl;
+    }
+}
