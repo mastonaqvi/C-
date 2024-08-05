@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int initialSize = 5;
+    int *arr = new int[initialSize];
+    for (int i = 0; i < initialSize; ++i) {
+        arr[i] = i * 2; // Assign some values
+    }
+    // Breakpoint here
+    // Simulate auto-grow
+    int newSize = initialSize * 2;
+    int *newArr = new int[newSize];
+    for (int i = 0; i < initialSize; ++i) {
+        newArr[i] = arr[i];
+    }
+    delete[] arr;
+    arr = newArr;
+    for (int i = initialSize; i < newSize; ++i) {
+        arr[i] = i * 2; // Assign new values
+    }
+    // Step through the code to see array values
+    delete[] arr;
+    return 0;
+}
