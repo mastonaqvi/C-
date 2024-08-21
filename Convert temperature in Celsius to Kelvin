@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declare a variable to store temperature in Celsius
+    double celsius;
+
+    // Ask the user to input the temperature in Celsius
+    cout << "Enter temperature in Celsius: ";
+    cin >> celsius;
+
+    // Convert Celsius to Kelvin
+    double kelvin = celsius + 273.15;
+
+    // Display the result
+    cout << "Temperature in Kelvin: " << kelvin << endl;
+
+    return 0;
+}
