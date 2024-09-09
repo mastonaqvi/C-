@@ -8,7 +8,7 @@ int main() {
         arr[i] = i * 2; // Assign some values
     }
     // Breakpoint here
-    // Simulate auto-grow
+    // Simulate AutoGrow
     int newSize = initialSize * 2;
     int *newArr = new int[newSize];
     for (int i = 0; i < initialSize; ++i) {
