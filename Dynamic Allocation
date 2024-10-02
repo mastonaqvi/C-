@@ -1,7 +1,7 @@
 // #include<iostream>
 // #include<fstream>
 // using namespace std;
-// int read(ifstream& file)
+// int read(ifstream& file) // file
 // {
 // 	int num_rows;
 // 	file >> num_rows;
