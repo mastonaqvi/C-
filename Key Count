@@ -7,7 +7,7 @@ int main()
 
 	for (int i = 0; i <= 4; i++)
 	{
-		cout << "enter number" << i << endl;
+		cout << "Enter number" << i << endl;
 		cin >> num1[i];
 	}
 	cout << endl;
