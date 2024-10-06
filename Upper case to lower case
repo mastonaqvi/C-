@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
     char array[27];
-    cout<<"Enter Character: ";
+    cout<<"Enter Characters: ";
     cin>>array;
 
     for(int i=0; array[i]!='\0'; i++){
