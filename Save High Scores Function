@@ -19,7 +19,7 @@ void saveHighScore(const string& playerName) {
     scores[count] = ::score;
     count++;
 
-    // Simple bubble sort to sort high scores
+    // Simple Bubble sort to sort high scores
     for (int i = 0; i < count; ++i) {
         for (int j = 0; j < count - 1; ++j) {
             if (scores[j] < scores[j + 1]) {
