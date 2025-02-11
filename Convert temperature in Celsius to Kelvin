@@ -6,7 +6,7 @@ int main() {
     double celsius;
 
     // Ask the user to input the temperature in Celsius
-    cout << "Enter temperature in Celsius: ";
+    cout << "Enter Temperature  in Celsius: ";
     cin >> celsius;
 
     // Convert Celsius to Kelvin
